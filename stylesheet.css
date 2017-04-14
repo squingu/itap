@@ -1,0 +1,656 @@
+/* Comment box background*/
+
+.comments-page .commentarea textarea{
+    background: #fff url(%%textareabg%%) top left no-repeat;
+}
+
+.comments-page .commentarea textarea:focus{
+    background: #fff;
+}
+
+.res-nightmode .comments-page .commentarea textarea{
+    background: #202020 url(%%textareabg%%) top left no-repeat;
+}
+
+.res-nightmode .comments-page .commentarea textarea:focus{
+    background: #202020;
+}
+
+/* Begin message the moderators */
+
+.side .helplink {
+border: 1px solid;
+border-radius: 2px;
+color: rgb(51, 102, 153);
+cursor: pointer;
+display: block;
+font-family: verdana,arial,helvetica,sans-serif;
+font-size: 15px;
+font-style: normal;
+font-variant: normal;
+font-weight: 700;
+letter-spacing: -1px;
+line-height: 29px;
+text-align: center;
+text-decoration: none;
+width: 298px;
+}
+.side .helplink:hover
+{
+color: #ffffff;
+background: #449ef8;
+background-color: #56a6f7;
+border-color: #56a6f7;
+}
+/* END message the moderators */
+
+
+#newlink {
+/* Change the padding-top px to the height of the image */
+padding-top:86px;
+
+/* change the background-image to whatever you want */
+background-image:url(%%submission%%);
+
+/* leave these properties as is */
+background-repeat:no-repeat;
+background-position:0px 0px;
+}
+
+/* Photo of the month */
+.side {
+    padding-top: 210px; /* Height of the image + 10px */
+}
+
+.side .md > blockquote:nth-of-type(1) {
+    position: absolute;
+    top: 75px; /* Height to position from top of the page */
+    right: 5px;
+    border: 0;
+    height: 200px; /* Height of the image */
+    margin: 0;
+    padding: 0;
+    width: 300px;
+}
+
+.side .md > blockquote:nth-of-type(1) > p > a > em {
+    font-size: 0pt;
+}
+
+
+.side .md > blockquote:nth-of-type(1) > p > a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(%%placeholder%%);
+}
+
+.side .md > blockquote:nth-of-type(1) strong {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    font-size: 12px;
+    padding: 3px;
+    font-weight: normal;
+    text-align: center;
+    font-family: "Verdana";
+}
+
+.side .md > blockquote:nth-of-type(1) strong a {
+    color: skyblue;
+    font-weight: 700;
+}
+
+.side .md > blockquote:nth-of-type(1) strong > a:last-child {
+    background: url(%%ig-icon%%) 0 0/cover;
+    height: 15px;
+    float: right;
+    margin-right: 5px;
+    width: 15px;
+    font-size: 0pt;
+}
+
+/* DOWNVOTE TOOLTIP FOR COMMENTS */
+.commentarea .arrow.down:hover:before {
+    position: absolute;
+    display: block;
+    z-index: 1000;
+    width: 130px;
+    padding: 5px;
+    border: 1px solid #000;
+    background: #FFF;
+    content: "Consider reporting off-topic comments.";
+    text-align: center; /* aligns text to the top, center, or bottom of the textbox */
+    font-size: 12px;
+    color: #000;
+    font-weight: normal; /* this line is optional. Delete it all together or set it to normal, bold, or italic */
+    margin-left: 23px;
+    margin-top: -17px;
+}
+
+/* DOWNVOTE TOOLTIP FOR SUBMISSIONS */
+.arrow.down:hover:before {
+    position: absolute;
+    display: block;
+    z-index: 1000;
+    width: 130px;
+    padding: 5px;
+    border: 1px solid #000;
+    background: #FFF;
+    content: "Please consider leaving constructive feedback instead.";
+    text-align: center; /* aligns text to the top, center, or bottom of the textbox */
+    font-size: 12px;
+    color: #000; /* font color in hexidecimal or plaintext */
+    font-weight: normal; /* this line is optional. Delete it all together or set it to normal, bold, or italic */
+    margin-left: 23px;
+    margin-top: -17px;
+}
+
+/* NO DOWNVOTE TOOLTIP FOR STICKIED POSTS */
+.stickied .down:hover:before {
+    content: normal;
+}
+
+
+/* FADE REPORT BUTTON TO RED AND BACK WHILE HOVERING OVER THE VOTE BUTTONS */
+.comment .midcol:hover ~ .entry .report-button a {
+    transition:color 0.5s;
+    color: #ff4d4d;
+}
+
+.entry .report-button a{
+    transition: color 0.5s;
+}
+
+/* HIDES THE "WHICH SUBREDDIT TO POST TO" SECTION ON THE SUBMIT PAGE */
+#reddit-field{
+    display:none;
+}
+
+/* -BEGIN UPDATED POST/COMMENT MODERATION BUTTONS- */
+.entry .buttons li.reported-stamp {
+background-color:#f5b400;
+border-radius:2px;
+border:1px solid #e2a600!important;
+color:#fff;
+font-weight:700;
+background-image:none
+}
+
+.entry .buttons li.reported-stamp:hover {
+background-color: #EDAE00;
+}
+
+a.pretty-button.negative {
+border-radius:2px;
+background-color:#dc4437;
+color:#fff;
+font-weight:700;
+border:1px solid #c4362a;
+background-image:none
+}
+
+a.pretty-button.negative:hover{
+background-color: #CC3F33;
+}
+
+a.pretty-button.neutral {
+border-radius:2px;
+font-weight:700;
+color:#fff;
+background-color:#666;
+border:1px solid #4d4d4d;
+background-image:none
+}
+
+a.pretty-button.neutral:hover {
+background-color: #5c5c5c;
+}
+
+a.pretty-button.positive {
+border-radius:2px;
+font-weight:700;
+color:#fff;
+background-color:#109d59;
+border:1px solid #0a8a4c;
+background-image:none
+}
+
+a.pretty-button.positive:hover {
+background-color: #0F8C50;
+}
+/* END UPDATED MODERATION BUTTONS */
+
+
+/* ---------------- */
+/* USER FLAIR STUFF */
+/* ---------------- */
+
+.flair {
+    text-indent: -9999px;
+    margin-right: 3px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    border-width: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: help;
+    border-radius: 0px
+}
+.res-nightmode .flair {
+    text-indent: -9999px;
+    margin-right: 3px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    border-width: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: help;
+    border-radius: 0px
+}
+/* Show the flair text on hover */
+.flair:hover {
+    width: auto;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 4px;
+    text-indent: 0;
+    background-image: none;
+    border-width: 1px;
+    border-radius: 2px;
+    background-color: whitesmoke;
+    color: black;
+    margin-right: 3px
+}
+.res-nightmode .flair:hover {
+    width: auto;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 4px;
+    text-indent: 0;
+    background-image: none;
+    border-width: 1px;
+    border-radius: 2px;
+    background-color: whitesmoke;
+    color: black;
+    margin-right: 3px
+}
+
+/* The individual websites! */
+.flair-instagram {
+    background-image: url(%%icons-1%%);
+    background-position: -32px 0px;
+}
+
+.res-nightmode .flair-instagram {
+    background-image: url(%%icons-1%%);
+    background-position: -32px 0px;
+}
+
+.flair-500px {
+    background-image: url(%%icons-1%%);
+    background-position: -16px 0px;
+}
+
+.res-nightmode .flair-500px {
+    background-image: url(%%icons-1%%);
+    background-position: -16px 0px;
+}
+
+.flair-twitter {
+    background-image: url(%%iconsprite3%%);
+    background-position: -32px -32px;
+}
+
+.res-nightmode .flair-twitter {
+    background-image: url(%%iconsprite3%%);
+    background-position: -32px -32px;
+}
+
+.flair-website {
+    background-image: url(%%icons-1%%);
+    background-position: -64px 0px;
+}
+
+.res-nightmode .flair-website {
+    background-image: url(%%icons-1%%);
+    background-position: -64px 0px;
+}
+.flair-facebook {
+    background-image: url(%%iconsprite3%%);
+    background-position: 0px -32px;
+}
+
+.res-nightmode .flair-facebook {
+    background-image: url(%%iconsprite3%%);
+    background-position: 0px -32px;
+}
+
+
+.flair-tumblr {
+    background-image: url(%%iconsprite3%%);
+    background-position: -32px -16px;
+}
+
+.res-nightmode .flair-tumblr {
+    background-image: url(%%iconsprite3%%);
+    background-position: -32px -16px;
+}
+
+.flair-flickr {
+    background-image: url(%%iconsprite3%%);
+    background-position: 0px -48px;
+}
+
+.res-nightmode .flair-flickr {
+    background-image: url(%%iconsprite3%%);
+    background-position: 0px -48px;
+}
+
+.flair-smugmug {
+    background-image: url(%%icons-1%%);
+    background-position: 0px -16px;
+}
+
+.res-nightmode .flair-smugmug {
+    background-image: url(%%icons-1%%);
+    background-position: 0px -16px;
+}
+
+.flair-behance {
+    background-image: url(%%icons-1%%);
+    background-position: -16px -16px;
+}
+
+.res-nightmode .flair-behance {
+    background-image: url(%%icons-1%%);
+    background-position: -16px -16px;
+}
+.flair-1x {
+    background-image: url(%%icons-1%%);
+    background-position: -32px -16px;
+}
+.res-nightmode .flair-1x {
+    background-image: url(%%icons-1%%);
+    background-position: -32px -32px;
+}
+.flair-camera{
+    background-image: url(%%camera%%);
+    background-position: 0 0;
+}
+
+.flair-verified{
+    background-image: url(%%verified%%);
+    background-position: 0 0;
+    width: 24px !important;
+}
+.flair-verified:hover{
+    width: auto !important;
+}
+
+.flair-frameit{
+    text-indent: 0 !important;
+    margin-right: auto !important;
+    width: auto !important;
+    height: 18px !important;
+    line-height: 18px !important;
+    color: #FFF;
+    font-weight: 700;
+    background-color: #FF4500;
+    vertical-align: middle;
+    border-width: 0;
+    padding: 0px 4px;
+    cursor: help;
+    border-radius: 4px
+}
+
+.res-nightmode .flair-frameit{
+    text-indent: 0 !important;
+    margin-right: auto !important;
+    width: auto !important;
+    height: 18px !important;
+    line-height: 18px !important;
+    color: #FFF;
+    font-weight: 700;
+    background-color: #FF4500;
+    vertical-align: middle;
+    border-width: 0;
+    padding: 0px 4px;
+    cursor: help;
+    border-radius: 4px
+}
+
+.flair-frameit:hover{
+    text-indent: 0 !important;
+    margin-right: auto !important;
+    width: auto !important;
+    height: 18px !important;
+    line-height: 18px !important;
+    color: #FFF;
+    font-weight: 700;
+    background-color: #EB4500;
+    vertical-align: middle;
+    border-width: 0;
+    padding: 0px 4px;
+    cursor: help;
+    border-radius: 4px
+}
+
+.res-nightmode .flair-frameit:hover{
+    text-indent: 0 !important;
+    margin-right: auto !important;
+    width: auto !important;
+    height: 18px !important;
+    line-height: 18px !important;
+    color: #FFF;
+    font-weight: 700;
+    background-color: #EB4500;
+    vertical-align: middle;
+    border-width: 0;
+    padding: 0px 4px;
+    cursor: help;
+    border-radius: 4px
+}
+
+
+/* -------------------- */
+/* USER FLAIR STUFF END */
+/* -------------------- */
+
+/* EXPANDABLE RULES*/
+
+h4{
+    text-align: center;
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+h5{
+    text-align: center;
+    font-weight: normal !important;
+    font-size: 10px !important;
+    margin: -7px !important;
+}
+h6{
+    font-weight: normal !important;
+    font-size: 12px !important;
+    text-decoration: none !important;
+}
+.side .md h3 {
+position: relative;
+color: #4d4d4d;
+background: #fff;
+font-size: 12px;
+font-weight: normal;
+margin: 0 10px 0 0px;
+padding: 5px 5px 5px 50px;
+border-right: 2px solid #DEDEDE;
+counter-increment: h3-counter;
+transition: 0.4s all;
+}
+
+.res-nightmode .side .md h3{
+    background: #262626;
+    color: #fff;
+}
+
+.side .md h6 {
+position: relative;
+color: #4d4d4d;
+background: #fff;
+font-size: 12px;
+font-weight: normal;
+margin: 0 10px 0 0px;
+padding: 5px 30px 5px 50px;
+border-right: 2px solid #DEDEDE;
+transition: 0.4s all;
+}
+
+.res-nightmode .side .md h6{
+    background: #262626;
+    color: #fff;
+}
+
+.side .md h3:hover { background: #F0F0F0; border-right: 5px solid #BABABA; transition: 0.2s all;}
+.res-nightmode .side .md h3:hover { background: #303030;}
+
+.side .md h6:hover { background: #F0F0F0; border-right: 5px solid #BABABA; transition: 0.2s all;}
+.res-nightmode .side .md h6:hover { background: #303030;}
+
+.side .md h3:before,
+.side .md ul li:before {
+position: absolute;
+content:' 'counter(h3-counter);
+width: 30px;
+color: #fff;
+height: 16px;
+text-align: center;
+line-height: 16px;
+font-size: 11px;
+display: inline;
+background: #ADADAD;
+border-radius: 3px;
+margin-left: -40px; }
+
+.res-nightmode .side .md h3:before,
+.res-nightmode .side .md ul li:before {
+    background: #363636;
+}
+
+.side .md h6:before,
+.side .md ul li:before {
+position: absolute;
+content:' ';
+width: 30px;
+color: #fff;
+height: 16px;
+line-height: 16px;
+font-size: 11px;
+display: inline;
+background: #ADADAD;
+border-radius: 3px;
+margin-left: -40px; }
+
+.res-nightmode .side .md h6:before,
+.res-nightmode .side .md ul li:before {
+    background: #363636;
+}
+
+.side .md h3:hover:before,
+.side .md ul li:hover:before { background: #759CB7; }
+
+.side .md h6:hover:before,
+.side .md ul li:hover:before { background: #759CB7; }
+
+.side .md h3 + blockquote { display: none; margin: 0; }
+.side .md h6 + blockquote { display: none; margin: 0; }
+
+.side .md h3:hover + blockquote,
+.side .md h3 + blockquote:hover {
+display: block;
+width: 300px;
+padding: 20px;
+position: absolute;
+right: 305px;
+color: #4d4d4d;
+margin-top: -26px;
+font-weight: normal;
+background: #F0F0F0;
+border: 1px solid #e4eef1;
+border-right: 0;
+z-index: 1000; }
+
+.res-nightmode .side .md h3:hover + blockquote,
+.res-nightmode .side .md h3 + blockquote:hover {
+    background: #262626;
+    border: 1px solid #202020;
+    color: #fff;
+}
+
+.side .md h6:hover + blockquote,
+.side .md h6 + blockquote:hover {
+display: block;
+width: 300px;
+padding: 20px;
+position: absolute;
+right: 305px;
+color: #4d4d4d;
+margin-top: -26px;
+font-weight: normal;
+background: #F0F0F0;
+border: 1px solid #e4eef1;
+border-right: 0;
+z-index: 1000;
+}
+
+.res-nightmode .side .md h6:hover + blockquote,
+.res-nightmode .side .md h6 + blockquote:hover {
+    background: #262626;
+    border: 1px solid #202020;
+    color: #fff;
+}
+
+.side .md h3:nth-of-type(2):hover + blockquote,
+.side .md h3:nth-of-type(2) + blockquote:hover,
+.side .md h3:nth-of-type(3):hover + blockquote,
+.side .md h3:nth-of-type(3) + blockquote:hover,
+.side .md h3:nth-of-type(6):hover + blockquote,
+.side .md h3:nth-of-type(6) + blockquote:hover,
+.side .md h3:nth-of-type(8):hover + blockquote,
+.side .md h3:nth-of-type(8) + blockquote:hover { margin-top: -41px; }
+
+.side .md h3:nth-of-type(4):hover + blockquote,
+.side .md h3:nth-of-type(4) + blockquote:hover { margin-top: -86px; }
+
+.side .md h3:nth-of-type(9):hover + blockquote,
+.side .md h3:nth-of-type(9) + blockquote:hover { margin-top: -101px; }
+
+.side .md h3:nth-of-type(10):hover + blockquote,
+.side .md h3:nth-of-type(10) + blockquote:hover { margin-top: -132px; }
+
+.side .md ul { list-style: none; padding-left: 20px; }
+.side .md ul li { counter-increment: step-counter; padding: 5px 10px; }
+
+.side .md ul li:before {
+content: counter(step-counter, upper-alpha);
+line-height: 16px;
+font-weight: bold; }
+/*END EXPANDABLE RULES*/
+
+
+/*GREEN BACKGROUND FOR DISTINGUISHED+STICKIED COMMENTS*/
+.comment.stickied {
+    border: solid 1px green !important;
+    background-color: #C2E8B3;
+}

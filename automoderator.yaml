@@ -1,0 +1,511 @@
+# Remove top level comments from a specific thread - Change ID and keywords.
+#parent_submission:
+#    id: [4i06gb]
+#type: comment
+#is_top_level: true
+#body (includes): ['keywords']
+#action: remove
+
+---
+
+# User shadowbans
+type: any
+author: [username]
+action: remove
+action_reason: Shadowban Removal
+
+---
+
+type: submission
+domain: [imgur.com, flickr.com, 500px.com, deviantart.com, 1x.com]
+title (includes): "itap"
+action: approve
+
+---
+
+# Remove posts containing following links
+type: submission
+domain: [viewshound.com, livememe.com, picshd.com, gfycat.com, giphy.com]
+action: remove
+
+---
+
+# Remove posts containing standard video hosting sites
+standard: video hosting sites
+action: remove
+action_reason: Link to video hosting site
+
+---
+
+# "ITAP" in the beginning of the title check
+type: submission
+~title (starts-with, case-sensitive): "ITAP"
+action: remove
+action_reason: "does not begin with ITAP"
+comment: |
+    Your submission has been removed for breaking one or more rules. Please read the subreddit rules in the sidebar carefully before submitting again, and pay attention to the **formatting and wording** of your title.
+
+    Make sure your title:
+
+    * begins with ITAP
+    * has no quotes, brackets or parentheses around ITAP
+    * the ITAP portion of the title (and only that portion) is ALL UPPERCASE
+
+    If you think this post has been removed by error, please message the mods.
+
+    ---
+
+---
+
+# Remove unhelpful /r/subreddit comments
+type: comment
+body (regex, full-text): '^\s*?/?r/\w+?\s*?$'
+action: remove
+action_reason: 'Unhelpful "/r/subreddit" comments'
+
+---
+
+# Automatically remove comments with 3 reports
+type: comment
+reports: 3
+action: remove
+action_reason: 'Removed - comment received 3 reports'
+modmail: A [{{kind}}]({{permalink}}) has received 3 reports and has been removed.
+
+---
+
+# BEGIN flair+report automoderator submission expulsion system (FRAMSES)
+# Remove all posts with 4 reports and send modmail.
+type: submission
+reports: 4
+action: remove
+modmail: The above {{kind}} by /u/{{author}} has received 4 reports. Please investigate.
+comment_stickied: true
+comment: |
+    Your submission has been automatically removed due to a high number of reports and is pending manual moderator review.
+
+    ---
+
+---
+# RULE 1
+type: submission
+reports: 1
+flair_text: "R1: Photography"
+action: remove
+action_reason: "Flair + report removal — Rule 1"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 1*:
+
+    > No paintings, illustrations or heavily altered images.
+
+    ---
+
+---
+
+type: submission
+reports: 2
+flair_text: "R1: Photography"
+action: remove
+action_reason: "Flair + report removal — Rule 1"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 1*:
+
+    > No paintings, illustrations or heavily altered images.
+
+    ---
+
+---
+
+type: submission
+reports: 3
+flair_text: "R1: Photography"
+action: remove
+action_reason: "Flair + report removal — Rule 1"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 1*:
+
+    > No paintings, illustrations or heavily altered images.
+
+    ---
+
+---
+# RULE 2
+type: submission
+reports: 1
+flair_text: "R2: OC"
+action: remove
+action_reason: "Flair + report removal — Rule 2"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 2*:
+
+    > You must be the author of the photos posted.
+
+    ---
+
+---
+
+type: submission
+reports: 2
+flair_text: "R2: OC"
+action: remove
+action_reason: "Flair + report removal — Rule 2"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 2*:
+
+    > You must be the author of the photos posted.
+
+    ---
+
+---
+
+type: submission
+reports: 3
+flair_text: "R2: OC"
+action: remove
+action_reason: "Flair + report removal — Rule 2"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 2*:
+
+    > You must be the author of the photos posted.
+
+    ---
+
+---
+
+# RULE 3
+type: submission
+reports: 1
+flair_text: "R3: Multiple photos"
+action: remove
+action_reason: "Flair + report removal — Rule 3"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 3*:
+
+    > Your submission needs to be a single photograph. Albums and other images can be posted in comments.
+    (Panoramas, stacked images, panographs and double exposures are allowed.)
+
+    ---
+
+---
+
+type: submission
+reports: 2
+flair_text: "R3: Multiple photos"
+action: remove
+action_reason: "Flair + report removal — Rule 3"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 3*:
+
+    > Your submission needs to be a single photograph. Albums and other images can be posted in comments.
+    (Panoramas, stacked images, panographs and double exposures are allowed.)
+
+    ---
+
+---
+
+type: submission
+reports: 3
+flair_text: "R3: Multiple photos"
+action: remove
+action_reason: "Flair + report removal — Rule 3"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 3*:
+
+    > Your submission needs to be a single photograph. Albums and other images can be posted in comments.
+    (Panoramas, stacked images, panographs and double exposures are allowed.)
+
+    ---
+
+---
+
+# RULE 4
+type: submission
+reports: 1
+flair_text: "R4: Snapshot"
+action: remove
+action_reason: "Flair + report removal — Rule 4"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 4*:
+
+    Your photograph should demonstrate an effort to teach/learn **technique** or **artistic style**, or be shared as an example of **quality photography**.
+
+    > 4a. **Submitters must participate in the discussion.** Whether it's a photographer asking the community at large what s/he could have done better, or users asking how to achieve a look or effect, posters are expected to contribute to the comments section.
+
+    &nbsp;
+
+    > 4b. **No snapshots.** Your photo should be well-composed, have an obvious subject, feature good use of color/tone and/or texture, have interesting lighting, and make purposeful use of depth of field.
+
+    ---
+
+---
+
+type: submission
+reports: 2
+flair_text: "R4: Snapshot"
+action: remove
+action_reason: "Flair + report removal — Rule 4"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 4*:
+
+    Your photograph should demonstrate an effort to teach/learn **technique** or **artistic style**, or be shared as an example of **quality photography**.
+
+    > 4a. **Submitters must participate in the discussion.** Whether it's a photographer asking the community at large what s/he could have done better, or users asking how to achieve a look or effect, posters are expected to contribute to the comments section.
+
+    &nbsp;
+
+    > 4b. **No snapshots.** Your photo should be well-composed, have an obvious subject, feature good use of color/tone and/or texture, have interesting lighting, and make purposeful use of depth of field.
+
+    ---
+
+---
+
+type: submission
+reports: 3
+flair_text: "R4: Snapshot"
+action: remove
+action_reason: "Flair + report removal — Rule 4"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 4*:
+
+    Your photograph should demonstrate an effort to teach/learn **technique** or **artistic style**, or be shared as an example of **quality photography**.
+
+    > 4a. **Submitters must participate in the discussion.** Whether it's a photographer asking the community at large what s/he could have done better, or users asking how to achieve a look or effect, posters are expected to contribute to the comments section.
+
+    &nbsp;
+
+    > 4b. **No snapshots.** Your photo should be well-composed, have an obvious subject, feature good use of color/tone and/or texture, have interesting lighting, and make purposeful use of depth of field.
+
+    ---
+
+---
+
+# RULE 5
+type: submission
+reports: 1
+flair_text: "R5: Title"
+action: remove
+action_reason: "Flair + report removal — Rule 5"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 5*:
+
+    > Keep titles short and descriptive of the photo. No backstory or click-bait titles.
+
+    ---
+
+---
+
+type: submission
+reports: 2
+flair_text: "R5: Title"
+action: remove
+action_reason: "Flair + report removal — Rule 5"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 5*:
+
+    > Keep titles short and descriptive of the photo. No backstory or click-bait titles.
+
+    ---
+
+---
+
+type: submission
+reports: 3
+flair_text: "R5: Title"
+action: remove
+action_reason: "Flair + report removal — Rule 5"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 5*:
+
+    > Keep titles short and descriptive of the photo. No backstory or click-bait titles.
+
+    ---
+
+---
+
+# RULE 6
+type: submission
+reports: 1
+flair_text: "R6: MLM"
+action: remove
+action_reason: "Flair + report removal — Rule 6"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 6 — Mona Lisa Monday posts*:
+
+    > 6a. Photos with a primary focus of one person staring, looking or thinking, without any other interesting action **are limited to Mondays (Midnight - Midnight, UTC).**
+
+    &nbsp;
+
+    > 6b. Photos of people in a state of action, reaction or interaction, or share their focus with a interesting setting or background, employ some unique photography technique or have exceptional / atypical styling (hair, makeup, studio setups) are not subjected to this rule and are allowed throughout the the week.
+
+    &nbsp;
+
+    > 6c. Mona Lisa Monday submission titles **must include the [MLM] tag.**
+
+    There is a timer in the sidebar under the Mona Lisa Monday rule which displays when MLM will begin/end.
+
+    ---
+
+---
+
+type: submission
+reports: 2
+flair_text: "R6: MLM"
+action: remove
+action_reason: "Flair + report removal — Rule 6"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 6 — Mona Lisa Monday posts*:
+
+    > 6a. Photos with a primary focus of one person staring, looking or thinking, without any other interesting action **are limited to Mondays (Midnight - Midnight, UTC).**
+
+    &nbsp;
+
+    > 6b. Photos of people in a state of action, reaction or interaction, or share their focus with a interesting setting or background, employ some unique photography technique or have exceptional / atypical styling (hair, makeup, studio setups) are not subjected to this rule and are allowed throughout the the week.
+
+    &nbsp;
+
+    > 6c. Mona Lisa Monday submission titles **must include the [MLM] tag.**
+
+    There is a timer in the sidebar under the Mona Lisa Monday rule which displays when MLM will begin/end.
+
+    ---
+
+---
+
+type: submission
+reports: 3
+flair_text: "R6: MLM"
+action: remove
+action_reason: "Flair + report removal — Rule 6"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 6 — Mona Lisa Monday posts*:
+
+    > 6a. Photos with a primary focus of one person staring, looking or thinking, without any other interesting action **are limited to Mondays (Midnight - Midnight, UTC).**
+
+    &nbsp;
+
+    > 6b. Photos of people in a state of action, reaction or interaction, or share their focus with a interesting setting or background, employ some unique photography technique or have exceptional / atypical styling (hair, makeup, studio setups) are not subjected to this rule and are allowed throughout the the week.
+
+    &nbsp;
+
+    > 6c. Mona Lisa Monday submission titles **must include the [MLM] tag.**
+
+    There is a timer in the sidebar under the Mona Lisa Monday rule which displays when MLM will begin/end.
+
+    ---
+
+---
+# RULE 6-c
+type: submission
+reports: 1
+flair_text: "R6-C: [MLM] tag"
+action: remove
+action_reason: "Flair + report removal — Rule 6-C [MLM] tag missing"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 6 section C*:
+
+    > 6c. Mona Lisa Monday submission titles **must include the [MLM] tag.**
+
+    ---
+
+---
+type: submission
+reports: 2
+flair_text: "R6-C: [MLM] tag"
+action: remove
+action_reason: "Flair + report removal — Rule 6-C [MLM] tag missing"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 6 section C*:
+
+    > 6c. Mona Lisa Monday submission titles **must include the [MLM] tag.**
+
+    ---
+
+---
+type: submission
+reports: 3
+flair_text: "R6-C: [MLM] tag"
+action: remove
+action_reason: "Flair + report removal — Rule 6-C [MLM] tag missing"
+comment_stickied: true
+comment: |
+    Your submission has been removed due to a violation of *Rule 6 section C*:
+
+    > 6c. Mona Lisa Monday submission titles **must include the [MLM] tag.**
+
+    ---
+
+---
+
+#Spam account detection
+type: comment
+author:
+    ~name: ["icomefrommurica", "Guatin12", "rimjees", "frameiteasy", "baldfella", "octavianc", "-575-"]
+    is_submitter: false
+    account_age: ">8 months"
+    post_karma: "<2"
+    comment_karma: "<150"
+is_edited: false
+action: filter
+action_reason: possible spam account
+
+---
+
+#MLM joke comment removal
+type: comment
+body(includes): ["marx"]
+body#2(includes): ["lenin"]
+action: remove
+action_reason: MLM joke funny haha
+
+---
+
+#[MLM] tag formatting checker
+type: submission
+title(includes): ["mlm"]
+~title#2(includes, case-sensitive): ["[MLM]"]
+action: remove
+action_reason: "[MLM] tag formatting"
+comment: |
+    Your submission has been removed due to incorrect formatting of the **[MLM]** tag. Please try posting again and make sure the tag is in UPPERCASE and is surrounded in brackets.
+
+---
+
+#Remove submissions from supload.com and leave a removal reason comment
+type: submission
+domain: [supload.com]
+action: remove
+action_reason: "supload.com link"
+comment: |
+    Supload.com links are automatically marked as spam by reddit. It is recommended you use other image sharing sites like Imgur, Flickr, or reddit's own image uploader.
+
+---
+
+#Remove comments summoning the gfycat/giphy gif bots
+body(regex): '(\/g(ifphy|iphy|yfcat|fycat|ifcat|iffy))'
+action: remove
+message: |
+    Hi there {{author}} , unfortunately we have banned the giphy and gfycat bots on this subreddit, so your comment to summon the bot has been automatically removed.
+
+    ---
+
+---
