@@ -2,7 +2,7 @@
 
 .comments-page .commentarea textarea{
     background: #fff url(%%textareabg%%) top left no-repeat;
-}
+} 
 
 .comments-page .commentarea textarea:focus{
     background: #fff;
@@ -59,15 +59,20 @@ background-position:0px 0px;
 
 /* Photo of the month */
 .side {
-    padding-top: 210px; /* Height of the image + 10px */
+    padding-top: 179px; /* Height of the image + 10px */
+}
+
+.side .md > blockquote:nth-of-type(1) strong .RESUserTag, .side .md > blockquote:nth-of-type(1) strong .voteWeight{
+    display: none !important;
+    visibility: hidden !important;
 }
 
 .side .md > blockquote:nth-of-type(1) {
     position: absolute;
-    top: 75px; /* Height to position from top of the page */
+    top: 85px; /* Height to position from top of the page */
     right: 5px;
     border: 0;
-    height: 200px; /* Height of the image */
+    height: 169px; /* Height of the image */
     margin: 0;
     padding: 0;
     width: 300px;
@@ -84,7 +89,7 @@ background-position:0px 0px;
     right: 0;
     bottom: 0;
     left: 0;
-    background: url(%%placeholder%%);
+    background: url(%%potmjune%%);
 }
 
 .side .md > blockquote:nth-of-type(1) strong {
@@ -92,7 +97,7 @@ background-position:0px 0px;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.35);
     color: #fff;
     font-size: 12px;
     padding: 3px;
@@ -106,14 +111,14 @@ background-position:0px 0px;
     font-weight: 700;
 }
 
-.side .md > blockquote:nth-of-type(1) strong > a:last-child {
+/*.side .md > blockquote:nth-of-type(1) strong > a:last-child {
     background: url(%%ig-icon%%) 0 0/cover;
     height: 15px;
     float: right;
     margin-right: 5px;
     width: 15px;
     font-size: 0pt;
-}
+}*/
 
 /* DOWNVOTE TOOLTIP FOR COMMENTS */
 .commentarea .arrow.down:hover:before {
@@ -127,7 +132,7 @@ background-position:0px 0px;
     content: "Consider reporting off-topic comments.";
     text-align: center; /* aligns text to the top, center, or bottom of the textbox */
     font-size: 12px;
-    color: #000;
+    color: #000; 
     font-weight: normal; /* this line is optional. Delete it all together or set it to normal, bold, or italic */
     margin-left: 23px;
     margin-top: -17px;
@@ -402,65 +407,65 @@ background-color: #0F8C50;
 .flair-frameit{
     text-indent: 0 !important;
     margin-right: auto !important;
+    margin-left: 2px;
     width: auto !important;
-    height: 18px !important;
-    line-height: 18px !important;
-    color: #FFF;
+    height: 25px !important;
+    line-height: 25px !important;
+    background: url(%%fiemini%%) no-repeat left;
+    background-size: 25px 25px;
+    color: #000;
     font-weight: 700;
-    background-color: #FF4500;
-    vertical-align: middle;
     border-width: 0;
-    padding: 0px 4px;
+    padding: 0px 0px 0px 30px;
     cursor: help;
-    border-radius: 4px
 }
 
 .res-nightmode .flair-frameit{
     text-indent: 0 !important;
     margin-right: auto !important;
+    margin-left: 2px;
     width: auto !important;
-    height: 18px !important;
-    line-height: 18px !important;
-    color: #FFF;
+    height: 25px !important;
+    line-height: 25px !important;
+    background: url(%%fiemini%%) no-repeat left;
+    background-size: 25px 25px;
+    color: #fff;
     font-weight: 700;
-    background-color: #FF4500;
-    vertical-align: middle;
     border-width: 0;
-    padding: 0px 4px;
+    padding: 0px 0px 0px 30px;
     cursor: help;
-    border-radius: 4px
 }
 
 .flair-frameit:hover{
     text-indent: 0 !important;
     margin-right: auto !important;
+    margin-left: 2px;
     width: auto !important;
-    height: 18px !important;
-    line-height: 18px !important;
-    color: #FFF;
+    height: 25px !important;
+    line-height: 25px !important;
+    background: url(%%fiemini%%) no-repeat left;
+    background-size: 25px 25px;
+    color: #000;
     font-weight: 700;
-    background-color: #EB4500;
-    vertical-align: middle;
     border-width: 0;
-    padding: 0px 4px;
+    padding: 0px 0px 0px 30px;
     cursor: help;
-    border-radius: 4px
 }
 
 .res-nightmode .flair-frameit:hover{
     text-indent: 0 !important;
     margin-right: auto !important;
+    margin-left: 2px;
     width: auto !important;
-    height: 18px !important;
-    line-height: 18px !important;
-    color: #FFF;
+    height: 25px !important;
+    line-height: 25px !important;
+    background: url(%%fiemini%%) no-repeat left;
+    background-size: 25px 25px;
+    color: #fff;
     font-weight: 700;
-    background-color: #EB4500;
-    vertical-align: middle;
     border-width: 0;
-    padding: 0px 4px;
+    padding: 0px 0px 0px 30px;
     cursor: help;
-    border-radius: 4px
 }
 
 
@@ -496,8 +501,8 @@ font-weight: normal;
 margin: 0 10px 0 0px;
 padding: 5px 5px 5px 50px;
 border-right: 2px solid #DEDEDE;
-counter-increment: h3-counter;
-transition: 0.4s all;
+counter-increment: h3-counter; 
+transition: 0.4s all;    
 }
 
 .res-nightmode .side .md h3{
@@ -514,7 +519,7 @@ font-weight: normal;
 margin: 0 10px 0 0px;
 padding: 5px 30px 5px 50px;
 border-right: 2px solid #DEDEDE;
-transition: 0.4s all;
+transition: 0.4s all; 
 }
 
 .res-nightmode .side .md h6{
@@ -611,7 +616,7 @@ font-weight: normal;
 background: #F0F0F0;
 border: 1px solid #e4eef1;
 border-right: 0;
-z-index: 1000;
+z-index: 1000; 
 }
 
 .res-nightmode .side .md h6:hover + blockquote,
@@ -645,12 +650,44 @@ z-index: 1000;
 .side .md ul li:before {
 content: counter(step-counter, upper-alpha);
 line-height: 16px;
-font-weight: bold; }
+font-weight: bold; } 
 /*END EXPANDABLE RULES*/
 
 
 /*GREEN BACKGROUND FOR DISTINGUISHED+STICKIED COMMENTS*/
 .comment.stickied {
     border: solid 1px green !important;
-    background-color: #C2E8B3;
+    background-color: #C2E8B3;    
+}
+
+/*FIE sidebar button*/
+
+.side .md p:nth-of-type(2) a[href*='https://goo.gl/V0CYbb']{
+    height: 45px;
+    width: 45px;
+    background: url(%%fielogo%%) no-repeat;
+    float: left;
+    position: relative;
+    top: 5px;
+}
+
+.side .md p:nth-of-type(3) a[href*='https://goo.gl/V0CYbb']{
+    background: transparent;
+}
+
+.side .md > p:nth-of-type(3){
+    display: inline-block;
+    width: 250px;
+    position: relative;
+    margin-left: 5px;
+    font-size: 11.5px;
+}
+/*End FIE sidebar button*/
+
+html{
+    overflow-x: hidden;
+}
+
+.md code{
+    color: #e91e63;
 }
